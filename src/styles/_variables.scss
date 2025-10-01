@@ -1,6 +1,16 @@
+$global-background-color: #fdfdfd;
+
 $color-primary: #2563eb;
 $on-primary: #ffffff;
 $color-surface: #f8fafc;
 $color-text: #0f172a;
 $color-border: #e2e8f0;
 $radius-lg: 12px;
+
+$breakpoint-mobile: 960px;
+
+$error-color: #9e1c15;
+$error-bg: #fdf2f2;
+$error-border: #ff8a4c;
+$error-btn-bg: #de2c18;
+$error-btn-text: #ffffff;

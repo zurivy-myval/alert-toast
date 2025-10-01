@@ -1,0 +1,82 @@
+.alert {
+  border-radius: 6px;
+  border: 1px solid #000000;
+  background-color: #ffffff;
+  color: #000000;
+  margin: 0 auto;
+  max-width: 100%;
+
+  display: flex;
+  flex-flow: row wrap;
+  gap: 8px;
+
+  @media (min-width: $breakpoint-mobile) {
+    max-width: 744px;
+  }
+
+  &ContentContainer {
+    flex: 1 0 0;
+    max-width: calc(100% - 20px);
+  }
+
+  &CloseContainer {
+    flex: 1 0 0;
+    max-width: max-content;
+  }
+
+  h2 {
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0;
+    font-weight: 600;
+
+    & + p {
+      margin-top: 6px;
+    }
+  }
+
+  p {
+    font-size: 0.875rem;
+    line-height: 1.5;
+    margin: 0;
+
+    & + a {
+      margin-top: 12px;
+    }
+  }
+
+  button {
+    background: transparent;
+    border: 0;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+.error {
+  color: $error-color;
+  background-color: $error-bg;
+  border-color: $error-border;
+  padding: 20px 16px;
+
+  h2 {
+    &::before {
+      width: 16px;
+      height: 16px;
+      content: '';
+      display: inline-block;
+      background-image: url('/images/ico-alert.svg');
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center center;
+      vertical-align: middle;
+      margin-right: 8px;
+    }
+  }
+}
+
+.hidden {
+  display: none;
+}

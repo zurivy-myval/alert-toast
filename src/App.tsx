@@ -1,12 +1,11 @@
-import React from 'react';
-import { Button } from '@/components/Button/Button';
+import { Alert } from '@/components/Alert/Alert';
 
 export default function App() {
   return (
     <main className="app">
-      <h1>React + Vite + SCSS (TS)</h1>
-      <p>Edit <code>src/App.tsx</code> and save to test HMR.</p>
-      <Button onClick={() => alert('It works!')}>Click me</Button>
+      <Alert title="Alert heading" moreLink="https://google.com">
+        Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.
+      </Alert>
     </main>
   );
 }

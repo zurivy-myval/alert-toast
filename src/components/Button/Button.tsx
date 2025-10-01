@@ -2,15 +2,14 @@ import React from 'react';
 import styles from './Button.module.scss';
 
 type Props = React.PropsWithChildren<{
-  onClick?: () => void;
-  variant?: 'primary' | 'secondary';
-  disabled?: boolean;
+  variant?: 'error' | 'success';
+  hrefLink?: string;
 }>;
 
-export const Button: React.FC<Props> = ({ children, onClick, variant = 'primary', disabled }) => {
+export const Button: React.FC<Props> = ({ children, hrefLink = '#' , variant = 'error' }) => {
   return (
-    <button className={styles[variant]} onClick={onClick} disabled={disabled}>
-      {children}
-    </button>
+    <a className={`${styles.button} ${styles[variant]}`} href={hrefLink}>
+      <img src="/images/ico-eye.svg" alt="View more ico" width="12" height="12" /> {children}
+    </a>
   );
 };
